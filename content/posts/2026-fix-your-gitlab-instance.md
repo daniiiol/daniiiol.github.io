@@ -32,7 +32,7 @@ A common setup looks like this:
 - Developers can still clone repositories via Git or their favourite CLI tools
 - Everyone assumes the instance is fully protected
 
-![image](/images/posts/gitlab-login-window.png)
+![example of gitlab login screen](/images/posts/gitlab-login-screen.png)
 
 In reality, these protections often cover only the start page, while other endpoints - UI paths and APIs - remain publicly accessible.
 
@@ -50,7 +50,7 @@ Depending on configuration, this page is **publicly accessible to anonymous user
 
 From there, an unauthenticated user can search for _Projects_, _Issues_, _Merge Requests_, _Milestones_ or _Users_.
 
-![image](/images/posts/gitlab-search-options.png)
+![example of gitlab search](/images/posts/gitlab-search.png)
 
 In many setups, only _two characters_ are required to trigger a search. That means:
 
