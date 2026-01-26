@@ -61,7 +61,7 @@ In many setups, only _two characters_ are required to trigger a search. That mea
 
 _True_ - but that is still a problem.
 
-In practice, public projects inside "private" GitLab instances often contain `PII` (names, emails, phone numbers), `secrets` in source files or commit history, `configuration files` never meant to be public, experimental or internal `tooling`.
+In practice, public projects inside "private" GitLab instances often contain _PII_ (names, emails, phone numbers), _secrets_ in source files or commit history, _configuration files_ never meant to be public, experimental or _internal tooling_. In addition, the user search almost always exposes _first_ and _last names_ when users are provisioned from central identity directories such as ADFS, LDAP or OIDC/SAML, alongside _usernames_, _avatar images_ and _activity-related information_, further contributing to the overall data exposure.
 
 This usually happens because people assume their GitLab instance is not reachable from the outside at all. The presence of a login page creates a false sense of security and leads to the belief that the entire system is properly protected. As a result, internal GitLab instances are often handled with significantly less discipline than public platforms like GitHub. Ironically, this means that private GitLab instances frequently expose more sensitive data than public GitHub repositories - precisely because they are perceived as being safer.
 
@@ -95,7 +95,7 @@ To restrict global search entirely:
 1. Save changes
 {{< /notice >}}
 
-## Issue 2 - Public API endpoints
+## _Issue 2_ - Public API endpoints
 
 GitLab exposes several API endpoints[^5] that are accessible **without** authentication by default.
 
@@ -149,7 +149,7 @@ What _does_ help:
 - Explicitly deny unauthenticated API access unless it is truly required
 {{< /notice >}}
 
-## Issue 3 – Public avatar images
+## _Issue 3_ – Public avatar images
 
 This issue has technically been solved by GitLab[^3] , but many instances are still misconfigured.
 
@@ -171,7 +171,9 @@ You can restrict this via visibility settings:
 
 # Final thoughts
 
-None of the issues described here qualify as "critical vulnerabilities". Even without direct secret leakage, they would typically score around CVSS `5.3 (Medium)` under CVSS v3.1 (_AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N_). 
+Security issues are not always the result of missing patches or broken code. Very often, they emerge from assumptions, habits and mental shortcuts made by people operating the systems. In reality, the issues discussed here show how quickly severity can escalate once access is gained and context is understood. 
+
+Access to the issues described above typically starts at around **CVSS 5.3 (Medium)** under CVSS v3.1 (_AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N_). Depending on the findings, especially when source code analysis is involved, the impact can increase significantly and may reach the maximum **CVSS score of 10.0** (_AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H_).
 
 **That is precisely what makes them dangerous.** They exist in a grey area where systems technically behave as designed, yet nobody has fully considered the real-world security implications of that design.
 
