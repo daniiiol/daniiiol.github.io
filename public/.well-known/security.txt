@@ -1,0 +1,4 @@
+Contact: mailto:daniiiol@proton.me
+Expires: 2026-12-31T22:59:00.000Z
+Encryption: https://daniiiol.github.io/publickey.daniiiol-at-proton.me.asc
+Preferred-Languages: de, en
