@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swiss security.txt landscape - Canton View - dan///ol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="libs/leaflet.css"
+  />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #ffffff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100%;
+      background: #ffffff;
+    }
+
+    .leaflet-control-attribution {
+      display: none;
+    }
+
+    .label {
+      background: white;
+      border: none;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 12px;
+      color: #111;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    #title {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+
+      padding: 10px 18px;
+      border-radius: 10px;
+
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: #111;
+
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    #title span {
+      display: block;
+      margin-top: 2px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #555;
+    }
+    
+    #footer {
+      position: fixed;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+
+      padding: 6px 14px;
+      border-radius: 8px;
+
+      font-size: 11px;
+      color: #444;
+      white-space: nowrap;
+
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="title">
+  Swiss security.txt landscape<br>
+  <span>Canton View · 2026</span>
+</div>
+
+<div id="map"></div>
+
+<div id="footer">
+  © 2026 <strong>dan///ol</strong> · Data: Federal Office of Topography swisstopo · Visualization: Leaflet
+</div>
+
+<script src="libs/leaflet.js"></script>
+
+<script>
+  // Load the map (Schweiz)
+  const map = L.map('map', {
+    zoomControl: false,
+    attributionControl: false
+  }).setView([46.8, 8.3], 8);
+
+  // Stil normal
+  function styleDefault(feature) {
+  const bfs = feature.properties.bfs_nummer;
+  const sectxt = feature.properties.securitytxt;
+
+  if (bfs > 9000) {
+    return {
+      color: '#0033cc',      // blue border
+      weight: 0.8,
+      fillColor: '#4d79ff',  // blue filled
+      fillOpacity: 0.6
+    };
+  }
+
+  if (sectxt == 1) {
+    return {
+      color: '#53621F',      // green border
+      weight: 0.8,
+      fillColor: '#90EF90',  // green filled
+      fillOpacity: 0.6
+    };
+  }
+
+if (sectxt == 0) {
+    return {
+      color: '#9A0212',      // red border
+      weight: 0.8,
+      fillColor: '#FA6B84',  // red filled
+      fillOpacity: 0.6
+    };
+  }
+
+  return {
+    color: '#111',
+    weight: 1.0,
+    fillOpacity: 0.3,
+    fillColor: '#c0c0c0'
+  };
+}
+
+  // Interactions
+  function onEachFeature(feature, layer) {
+  const name = feature.properties.name || 'Unknown';
+  const bfs = feature.properties.bfs_nummer || 'Canton';
+
+  // Tooltip with name
+  layer.bindTooltip(name + " [" + bfs + "]", {
+    sticky: true,
+    direction: 'top',
+    className: 'label'
+  });
+
+  layer.on({
+    mouseover: (e) => {
+      e.target.bringToFront();
+    },
+    mouseout: (e) => {
+      geojson.resetStyle(e.target);
+    }
+  });
+}
+
+
+  // load GeoJSON
+  let geojson;
+
+  fetch('cantons_sectxt_2026.geojson')
+    .then(response => response.json())
+    .then(data => {
+      geojson = L.geoJSON(data, {
+        style: styleDefault,
+        onEachFeature: onEachFeature
+      }).addTo(map);
+
+      map.fitBounds(geojson.getBounds());
+    })
+    .catch(err => {
+      console.error('GeoJSON could not be loaded:', err);
+    });
+    
+</script>
+
+</body>
+</html>

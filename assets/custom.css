@@ -24,3 +24,7 @@
     margin-left: -120px;
     opacity: 0.5;
 }
+
+p > img {
+    border-radius: 0.6rem;
+}
