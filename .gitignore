@@ -1,1 +1,4 @@
 ﻿public
+
+!/public/.well-known/
+!/public/.well-known/**

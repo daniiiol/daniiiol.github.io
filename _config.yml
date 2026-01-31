@@ -1,1 +1,1 @@
-include: ["static/.well-known"]
+include: [".well-known"]
