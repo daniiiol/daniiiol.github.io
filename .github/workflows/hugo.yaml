@@ -84,24 +84,24 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
-      - name: Debug .well-known
-        run: |
-          echo "=== static ==="
-          ls -la static || true
-          ls -la static/.well-known || true
-          echo "=== public ==="
-          ls -la public || true
-          ls -la public/.well-known || true
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v5
         with:
           path: ${{ runner.temp }}/hugo_cache
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
+      - name: Create Pages artifact (keep .well-known)
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            -cvf $RUNNER_TEMP/artifact.tar \
+            -C public \
+            .
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
-          path: ./public
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
   deploy:
     environment:
       name: github-pages
