@@ -84,6 +84,14 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
+      - name: Debug .well-known
+        run: |
+          echo "=== static ==="
+          ls -la static || true
+          ls -la static/.well-known || true
+          echo "=== public ==="
+          ls -la public || true
+          ls -la public/.well-known || true
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v5
