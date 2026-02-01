@@ -3,6 +3,9 @@ authors = ["Dan"]
 title = "Back on the Other Side: A Bug Bounty Perspective from 2025"
 date = "2026-01-02"
 description = "Bug Bounty journey in 2025"
+images = [
+    "/images/daniiiol_about-me.png"
+]
 tags = [
     "security",
     "vulnerabilities",

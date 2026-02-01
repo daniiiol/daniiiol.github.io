@@ -3,6 +3,9 @@ authors = ["Dan"]
 title = "Please, fix your GitLab instance. Now."
 date = "2026-01-25"
 description = "Please, fix your GitLab instance right now"
+images = [
+    "/images/posts/gitlab-login-screen.png"
+]
 tags = [
     "security",
     "vulnerabilities",

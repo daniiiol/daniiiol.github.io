@@ -3,6 +3,9 @@ authors = ["Dan"]
 title = "The Swiss security.txt landscape in 2026"
 date = "2026-02-01"
 description = "Who's listening? security.txt adoption in Swiss cantons and municipalities"
+images = [
+    "/images/posts/hoheit_sectxt_2026_0201_2.png"
+]
 tags = [
     "security",
     "vulnerabilities",
