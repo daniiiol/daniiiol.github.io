@@ -83,7 +83,7 @@ I tried to identify as many municipalities as possible. However, determining the
 
 The following image shows the overall situation for security contacts at the municipal level:
 
-<a href="/attachements/posts/securitytxt/municipalities.html" target="_blank">![Overview of all municipalities with a published security.txt (green)](/images/posts/hoheit_sectxt_2026_0201.png)</a>
+<a href="/attachements/posts/securitytxt/municipalities.html" target="_blank">![Overview of all municipalities with a published security.txt (green)](/images/posts/hoheit_sectxt_2026_0201_2.png)</a>
 
 {{< notice tip >}}
 Click on the image to open the interactive map. 
