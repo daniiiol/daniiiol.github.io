@@ -37,6 +37,8 @@ The system also follows a strict one time retrieval model. A generated link work
 
 {{< notice note >}}
 For those who would like to try it, a demo instance is available here: [Demo](https://annotterway2secexchangewebapp.azurewebsites.net/)
+
+_(It's hosted on a free tier. Cold starts may take a few seconds while the instance pulls the image and boots up)_
 {{< /notice >}}
 
 # Designed for real workflows
@@ -66,6 +68,7 @@ Looking back, the project became an exercise in balancing security with usabilit
 If this tool helps reduce the number of passwords and keys sent through email or stored in chat histories, then it has already achieved its purpose.
 
 For those planning to use the tool in a more formal or professional environment, the visual appearance can be fully customized. Texts, logos, and even the pirate themed language can be overridden to align with corporate design requirements or internal policies. This allows the tool to be used in more serious contexts where the playful defaults might not be appropriate (a decision I will respectfully disagree with 😉).
+
 
 [^1]: Side note: I started the project three years ago (October 12, 2023). However, the blog has only existed since this year, so I’m happy to finally catch up with a proper article and expand on it
 [^2]: cf. _Ubuntu Chiseled + .NET_, [https://github.com/dotnet/dotnet-docker/blob/main/documentation/ubuntu-chiseled.md](https://github.com/dotnet/dotnet-docker/blob/main/documentation/ubuntu-chiseled.md), accessed 2026-02-13
