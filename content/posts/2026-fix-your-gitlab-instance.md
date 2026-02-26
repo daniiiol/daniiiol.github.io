@@ -166,7 +166,7 @@ You can restrict this via visibility settings:
 1. Go to **Admin**
 1. Navigate to **Restricted visibility levels**
 1. Expand **Visibility and access controls**
-1. Restrict **visibility levels** to **Internal**
+1. Restrict **visibility levels** to **Public** (checkbox must be **activated**!)
 1. Remove **Public**
 1. Save changes
 {{< /notice >}}
