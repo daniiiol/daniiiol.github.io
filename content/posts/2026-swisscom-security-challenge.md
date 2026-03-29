@@ -21,6 +21,8 @@ series = ["Bug Bounty Journey"]
 
 # Year After Year
 
+![Swisscom's CTF challenges in one picture](/images/posts/2026-swisscom-challenge-cover.png)
+
 Swisscom publishes a new Capture The Flag puzzle in their [security.txt](https://swisscom.com/.well-known/security.txt) every year. The first puzzle was released in 2022. In December 2023, I learned about it and tried to solve the puzzle. Unfortunately, I ran out of time to find the solution[^1] within the valid period. I still remember the friendly message[^2] when I eagerly thought I had solved the puzzle:
 
 > Your solution isn't quite right regarding the email address. So I had to take another round internally as well.
