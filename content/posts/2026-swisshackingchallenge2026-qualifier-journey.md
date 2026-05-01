@@ -21,7 +21,7 @@ series = ["CTF Journey"]
 
 ![SHC2026 - Cover Image](/images/posts/2026-shc_cover.png)
 
-This wasn't my first CTF competition - but it was my first Swiss Hacking Challenge. When my son mentioned it, I didn't even realize it had already kicked off. Twenty-two days in, to be exact. No ambitions, no pressure. I just wanted to dip my toes in and see what these challenges were about.
+This wasn't my first CTF competition - but it was my first [Swiss Hacking Challenge](https://swiss-hacking-challenge.ch/competitions/). When my son mentioned it, I didn't even realize it had already kicked off. Twenty-two days in, to be exact. No ambitions, no pressure. I just wanted to dip my toes in and see what these challenges were about.
 
 ![SHC2026 - My Performance](/images/posts/2026-shc_scoreboard-ch-progress.png)
 
@@ -76,4 +76,4 @@ In education, we're moving toward the flipped classroom model: what used to happ
 But the energy is there. The question is how we channel it into something productive.
 
 [^1]: cf. *A big thank you goes to Stephen Sims aka "Off By One Security"*,  [https://www.youtube.com/@OffByOneSecurity/](https://www.youtube.com/@OffByOneSecurity/), accessed 2026-05-01.
-[^2]: _264_ participants who completed at least one challenge.
+[^2]: _264_ participants who completed at least one challenge. Cf. [https://qualifier.swiss-hacking-challenge.ch/scoreboard](https://qualifier.swiss-hacking-challenge.ch/scoreboard), accessed 2026-05-01
