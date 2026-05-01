@@ -16,7 +16,7 @@ categories = [
     "Bug Bounty",
     "CTF"
 ]
-series = ["Bug Bounty Journey"]
+series = ["CTF Journey"]
 +++
 
 # Year After Year
