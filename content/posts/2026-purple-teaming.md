@@ -28,7 +28,7 @@ I've been banging the "Purple Teaming" drum for years. It's a niche term, even i
 
 The wind has shifted. Finding vulnerabilities isn't the bottleneck anymore. Fixing them fast enough is.
 
-OpenAI's[^4] official cyber evaluation describes GPT-5.5 as a model with high cyber capability. The UK AI Security Institute rated it as the strongest performer they've ever seen on their cyber tasks.[^2] Anthropic[^5] documents Claude Mythos Preview finding zero-days in major operating systems and browsers. Let that sink in for a moment.
+OpenAI's official cyber evaluation describes GPT-5.5 as a model with high cyber capability.[^4] The UK AI Security Institute rated it as the strongest performer they've ever seen on their cyber tasks.[^2] Anthropic documents Claude Mythos Preview finding zero-days in major operating systems and browsers.[^5] Let that sink in for a moment.
 
 The conclusion? Discovery got cheaper. A lot cheaper. And if I don't speed up my defence now, I'm going to lose the economic race against AI-augmented offence.
 
