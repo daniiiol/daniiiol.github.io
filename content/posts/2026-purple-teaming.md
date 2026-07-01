@@ -15,7 +15,7 @@ categories = [
     "Security",
     "Chaos Engineering"
 ]
-series = ["Secure by default"]
+series = ["Secure-by-default"]
 +++
 
 # Why I would build a <span style="color:#8b5cf6">purple</span> team right now
