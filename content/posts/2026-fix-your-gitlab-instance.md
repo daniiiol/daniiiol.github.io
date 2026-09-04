@@ -4,7 +4,7 @@ title = "Please, fix your GitLab instance. Now."
 date = "2026-01-25"
 description = "Please, fix your GitLab instance right now"
 images = [
-    "/images/posts/gitlab-login-screen.png"
+    "/images/posts/2026-keycloak-example_update-social.png"
 ]
 tags = [
     "security",
@@ -16,7 +16,7 @@ categories = [
     "Security",
     "Bug Bounty",
 ]
-series = ["Bug Bounty Journey"]
+series = ["Bug-Bounty-Journey"]
 +++
 
 Many organisations believe their GitLab instance is secure because it is "behind a login".

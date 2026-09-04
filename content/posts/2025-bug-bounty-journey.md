@@ -15,7 +15,7 @@ categories = [
     "Security",
     "Bug Bounty",
 ]
-series = ["Bug Bounty Journey"]
+series = ["Bug-Bounty-Journey"]
 +++
 
 In a professional context, bug bounty is part of my day-to-day work. I receive reports from security researchers, perform triage, forward valid findings to product teams, and support the remediation process. In other cases, this also means explaining - as transparently and respectfully as possible - why a report does not qualify as a security issue.
