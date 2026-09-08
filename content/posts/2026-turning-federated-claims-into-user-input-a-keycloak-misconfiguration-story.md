@@ -3,6 +3,10 @@ authors = ["Dan"]
 title = "Turning Federated Claims into User Input: A Keycloak Misconfiguration Story"
 date = "2026-09-04"
 description = "What happens when UPDATE_PROFILE is allowed to rewrite data that an IdP has just verified"
+images = [
+    "/images/posts/2026-keycloak-example_update-social2.png", 
+    "/images/posts/2026-keycloak-example_update-social.png"
+]
 tags = [
     "security",
     "keycloak",
